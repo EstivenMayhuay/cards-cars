@@ -1,0 +1,105 @@
+:root {
+    --birght-orange: hsl(31, 77%, 52%);
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+
+    --transparent-white-paragraph: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray-bg-heading-button: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h2 h3 h4, h5, h6 {
+    font-family: 'Big Shoulders Display', cursive;
+}
+
+p, button, span {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+    padding: 2rem 0;
+    background-color: #F2F2F2;
+}
+
+.cars {
+    width: 300px;
+    margin: auto;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.car__item {
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    padding: 2.5rem 1.5rem;
+}
+
+.car__item--sedans {
+    background-color: var(--birght-orange);
+}
+
+.car__item--suvs {
+    background-color: var(--dark-cyan);
+}
+
+.car__item--luxury {
+    background-color: var(--very-dark-cyan);
+}
+
+.car__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--very-light-gray-bg-heading-button);
+}
+
+.car__desc {
+    font-size: 0.85rem;
+    line-height: 1.5rem;
+    color: var(--transparent-white-paragraph);
+    font-weight: 600;
+}
+
+.car__btn {
+    width: 110px;
+    outline: none;
+    border: none;
+    border-radius: 1rem;
+    padding: 0.75rem 0;
+    font-weight: 600;
+    background-color: var
+    (--very-light-gray-bg-heading-button);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.car__item--sedans .car__btn {
+    color: var(--birght-orange);
+}
+
+.car__item--suvs .car__btn {
+    color: var(--dark-cyan);
+}
+
+.car__item--luxury .car__btn {
+    color: var(--very-dark-cyan);
+}
+
+@media screen and (min-width: 768px) {
+    .cars {
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto;
+        width: 700px;
+    }
+}
